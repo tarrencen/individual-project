@@ -95,5 +95,5 @@ def pipe_fitter(X_scaled, y):
     returns the target df with a column of predictions(['yhat_']) from the model.'''
     lr = LinearRegression()
     lr.fit(X_scaled, y)
-    y['yhat_'] = lr.predict(X_scaled)
+    y['yhat_lr'] = lr.predict(X_scaled)
     return y
