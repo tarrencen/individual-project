@@ -114,7 +114,7 @@ High - High Price of One minute Candle
 Low - Low Price of One minute Candle
 Close - Close Price of One minute Candle
 
-Data timeframe was from the period spanning Feb 2017-Dec 2019.
+The data's timeframe was the period spanning Feb 2017-Dec 2019.
 
 ### Procedure:
 - Acquire: Download the data, posted on Kaggle (https://www.kaggle.com/datasets/ishantj/nifty100?select=Nifty_100.csv), and read it into Python (with Pandas library's read_csv function).
@@ -127,3 +127,9 @@ Data timeframe was from the period spanning Feb 2017-Dec 2019.
 
 - Univariate analysis revealed that the features' distributions were mostly normal.
 - After the data was wrangled, the remaining features of the dataset were all related to price. As such, the features were all strongly correlated with each other, confirmed with a combination of visualizations and correlations testing.
+- Because of the data's natural linearity, linear machine learning models were deemed most suited to the task of predicting its most probable future values. OLS, LASSO + LARS, and GLM models were trained on and tested against the data.
+
+# Conclusions:
+- An OLS Regression model using opening, high, mid-range, and low prices predicts closing price for India's National Stock Exchange Nifty 100 index for dates after 12-31-2019 to within 1.37 Indian rupees.
+- The lack of categorical variables or any other variables that were not directly related to price made it impossible to add any context or draw conclusions about why the index's price is what it is and/or why the model predictions are what they are.
+- Some very creative feature engineering or an aggregation of other features matched to the data might improve the predictive power of this model.
