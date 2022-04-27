@@ -222,3 +222,17 @@ def row_null_analysis(df):
     row_null_pct = df.isna().mean(axis=1) * 100
     df_null_rows = pd.DataFrame({'row_null_count': row_null_count, 'row_null_pct': row_null_pct})
     return df_null_rows
+
+def wrangle_nifty(df):
+    '''
+    Takes in a df of the Nifty 100 index dataset
+    returns df with Date and Time columns combined, converted to datetime dtype and set as index
+    '''
+    
+    df['timestamp'] = df.Date + ' ' + df.Time
+    df.timestamp = pd.to_datetime(df.timestamp)
+    df = df.set_index(df.timestamp)
+    df = df.drop(columns= ['Date', 'Time', 'timestamp'])
+    df = df.rename (columns= {'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close'})
+    return df
+    
