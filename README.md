@@ -235,6 +235,6 @@ The data's timeframe was the period spanning Feb 2017-Dec 2019.
 - Because of the data's natural linearity, linear machine learning models were deemed most suited to the task of predicting its most probable future values. OLS, LASSO + LARS, and GLM models were trained on and tested against the data.
 
 # Conclusions:
-- An OLS Regression model using opening, high, mid-range, and low prices predicts closing price for India's National Stock Exchange Nifty 100 index for dates after 12-31-2019 to within 1.37 Indian rupees.
+- An OLS Regression model using opening, high, mid-range, and low prices predicts closing price for India's National Stock Exchange Nifty 100 index for dates after 12-31-2019 to within 1.37 Indian rupees, beating the baseline by more than 432 rupees.
 - The lack of categorical variables or any other variables that were not directly related to price made it impossible to add any context or draw conclusions about why the index's price is what it is and/or why the model predictions are what they are.
 - Some very creative feature engineering or an aggregation of other features matched to the data might improve the predictive power of this model.
