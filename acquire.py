@@ -241,7 +241,7 @@ def get_opsd():
 
 def get_nifty_100():
     filename = 'Nifty_100.csv'
-    if os.path.exist(filename):
+    if os.path.exists(filename):
         print('Reading from CSV file...')
         return pd.read_csv(filename)
 
