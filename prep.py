@@ -97,3 +97,18 @@ def pipe_fitter(X_scaled, y):
     lr.fit(X_scaled, y)
     y['yhat_lr'] = lr.predict(X_scaled)
     return y
+
+def get_proportional_splits(df):
+    # Prepare to make splits
+    train_size = round(len(df) * .5)
+    validate_size = round(len(df) * .3)
+    test_size= len(df) - train_size - validate_size
+    val_end_idx = train_size + validate_size
+
+    # Make splits
+    train = df[:train_size]
+    validate = df[train_size:val_end_idx]
+    test = df[val_end_idx:]
+
+    assert(train_size + validate_size + test_size == df.size)
+    return train, validate, test
