@@ -15,6 +15,5 @@ __init__.py
 *.json
 ar_pt_sample.ipynb
 Nifty_100.csv.zip
-acquire.py
 cluster.py
 world_bank.ipynb
