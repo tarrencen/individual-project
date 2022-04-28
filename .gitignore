@@ -1,6 +1,5 @@
 *.csv
 env.py
-evaluate.py
 explore.py
 __pycache__/
 __init__.py
