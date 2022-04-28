@@ -206,17 +206,18 @@ Goal: Develop an ML regression model to attempt to predict the closing price for
 
 ### Data Dictionary:
 
-Date - Date in format (DD/MM/YYYY)
+timestamp - Date in format (DD/MM/YYYY HH:MM:SS) as index
 
-Time - Timestamp (HH:MM:SS) [24 Hours Time Format]
+open - Open Price of One minute Candle (a commonly used type of marker on a stock price graph)
 
-Open - Open Price of One minute Candle (a commonly used type of marker on a stock price graph)
+high - High Price of One minute Candle
 
-High - High Price of One minute Candle
+low - Low Price of One minute Candle
 
-Low - Low Price of One minute Candle
+close - Close Price of One minute Candle
 
-Close - Close Price of One minute Candle
+mid_range - high + low / 2
+
 
 
 The data's timeframe was the period spanning Feb 2017-Dec 2019.
