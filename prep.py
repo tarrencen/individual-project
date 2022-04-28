@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import wrangle as wr
-from env import get_db_url
 from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
