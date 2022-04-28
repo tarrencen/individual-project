@@ -235,7 +235,7 @@ def get_opsd():
         return pd.read_csv(filename)
 
     df = pd.read_csv('https://raw.githubusercontent.com/jenfly/opsd/master/opsd_germany_daily.csv')
-    df.to_csv(filename)
+    df.to_csv(filename, index=False)
     return df
 
 
@@ -246,6 +246,6 @@ def get_nifty_100():
         return pd.read_csv(filename)
 
     df = pd.read_csv('https://www.kaggle.com/datasets/ishantj/nifty100?select=Nifty_100.csv')
-    df.to_csv(filename)
+    df.to_csv(filename, index=False)
     return df
     
