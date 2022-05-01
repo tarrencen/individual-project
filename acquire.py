@@ -240,12 +240,15 @@ def get_opsd():
 
 
 def get_nifty_100():
+    '''
+    Returns a dataframe of the Nifty 100 Index data.
+    If file is not in directory go to https://www.kaggle.com/datasets/ishantj/nifty100?select=Nifty_100.csv) to download the CSV.'''
     filename = 'Nifty_100.csv'
     if os.path.exists(filename):
         print('Reading from CSV file...')
         return pd.read_csv(filename)
 
-    df = pd.read_csv('https://www.kaggle.com/datasets/ishantj/nifty100?select=Nifty_100.csv')
-    df.to_csv(filename, index=False)
+    df = pd.read_csv('Nifty_100.csv')
+    df.to_csv(filename)
     return df
     
