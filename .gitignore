@@ -1,4 +1,4 @@
-*.csv
+otc_0422_2022.csv
 env.py
 explore.py
 __pycache__/
